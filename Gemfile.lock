@@ -100,6 +100,7 @@ GEM
       omniauth (~> 1.0)
     orm_adapter (0.5.0)
     pg (0.18.1)
+    popular (0.7.4)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -202,6 +203,7 @@ DEPENDENCIES
   jquery-rails
   omniauth-linkedin
   pg
+  popular
   pry
   pry-coolline
   pry-doc
