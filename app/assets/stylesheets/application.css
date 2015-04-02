@@ -10,6 +10,22 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootstrap
+ *= require devise_bootstrap_views
  *= require_tree .
  *= require_self
  */
+
+#home {
+  height: 100vh;
+}
+
+#section-1, #section-2, #section-3 {
+  height: 100vh;
+}
+
+.question {
+  height: 250px;
+  border: 1px solid #a3a3a3;
+  border-radius: 5%;
+}
