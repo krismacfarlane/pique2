@@ -26,14 +26,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'omniauth-linkedin'
 gem 'devise-bootstrap-views'
-<<<<<<< HEAD
+
 gem 'popular'
-=======
+
 gem 'bootstrap-will_paginate'
 gem 'will_paginate'
 
 gem "mailboxer"
->>>>>>> master
 
 gem 'pry'
 gem 'pry-stack_explorer'
