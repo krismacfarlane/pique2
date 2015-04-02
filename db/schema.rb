@@ -11,16 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150402201642) do
-=======
-ActiveRecord::Schema.define(version: 20150402193050) do
->>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "friendship_profiles", force: :cascade do |t|
     t.integer  "friendship_id"
     t.string   "meeting_location"
@@ -43,7 +38,7 @@ ActiveRecord::Schema.define(version: 20150402193050) do
 
   add_index "friendships", ["friend_id", "friend_type"], name: "index_friendships_on_friend_id_and_friend_type", using: :btree
   add_index "friendships", ["popular_model_id", "popular_model_type"], name: "index_friendships_on_popular_model_id_and_popular_model_type", using: :btree
-=======
+
   create_table "mailboxer_conversation_opt_outs", force: :cascade do |t|
     t.integer "unsubscriber_id"
     t.string  "unsubscriber_type"
@@ -96,7 +91,6 @@ ActiveRecord::Schema.define(version: 20150402193050) do
 
   add_index "mailboxer_receipts", ["notification_id"], name: "index_mailboxer_receipts_on_notification_id", using: :btree
   add_index "mailboxer_receipts", ["receiver_id", "receiver_type"], name: "index_mailboxer_receipts_on_receiver_id_and_receiver_type", using: :btree
->>>>>>> master
 
   create_table "users", force: :cascade do |t|
     t.string   "name",                   default: "", null: false
@@ -119,6 +113,4 @@ ActiveRecord::Schema.define(version: 20150402193050) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-
-  add_foreign_key "friendship_profiles", "friendships"
 end
