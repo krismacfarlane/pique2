@@ -26,6 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'omniauth-linkedin'
 gem 'devise-bootstrap-views'
+gem 'bootstrap-will_paginate'
+gem 'will_paginate'
+
+gem "mailboxer"
 
 gem 'pry'
 gem 'pry-stack_explorer'
@@ -52,5 +56,8 @@ end
 
 group :production do
   gem 'rails_12factor'
+
+# Use Unicorn as the app server
+  gem 'unicorn'
 end
 
