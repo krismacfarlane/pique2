@@ -11,10 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150402172226) do
+ActiveRecord::Schema.define(version: 20150402201642) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "friendship_profiles", force: :cascade do |t|
+    t.integer  "friendship_id"
+    t.string   "meeting_location"
+    t.float    "meeting_latitude"
+    t.float    "meeting_longitude"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "friendship_profiles", ["friendship_id"], name: "index_friendship_profiles_on_friendship_id", using: :btree
+
+  create_table "friendships", force: :cascade do |t|
+    t.integer  "popular_model_id"
+    t.string   "popular_model_type"
+    t.integer  "friend_id"
+    t.string   "friend_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "friendships", ["friend_id", "friend_type"], name: "index_friendships_on_friend_id_and_friend_type", using: :btree
+  add_index "friendships", ["popular_model_id", "popular_model_type"], name: "index_friendships_on_popular_model_id_and_popular_model_type", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",                   default: "", null: false
@@ -38,4 +61,5 @@ ActiveRecord::Schema.define(version: 20150402172226) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "friendship_profiles", "friendships"
 end
