@@ -1,0 +1,7 @@
+<% @users.each do |user| %>
+  <div class="list">
+    <%= user.name %>
+    <img src="<%= user.image %>">
+    <%= link_to 'Show', user %>
+  </div>
+<% end %>

@@ -1,3 +1,4 @@
-class FriendshipProfile < ActiveRecord::Base
-  belongs_to :friendship
-end
+# class FriendshipProfile < ActiveRecord::Base
+#   belongs_to :friendships
+
+# end

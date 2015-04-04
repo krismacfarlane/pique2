@@ -1,8 +1,11 @@
-<%#= user.user_name %> has <%#= friendships.count %> friends.
+<% @friends.each do |friend| %>
+  <%= @friend.id %> has <%= @friends.count %> friends.
 
-<%#= %>
+<% end %>
 
-<br/>
-<a href="/mumbles/new"><h2>new mumble</h2></a>
+<%= @friend.id %>
+
+<!-- <br/>
+<a href="/mumbles/new"><h2>new mumble</h2></a> -->
 
 
