@@ -6,8 +6,7 @@ Rails.application.routes.draw do
 
   resources :conversations, only: [:index, :show, :destroy]
 
-  resources :friendships, only: [:index, :create, :show, :edit, :update, :destroy]
-
+  resources :friendships
   resources :users
   resources :projects
 end
