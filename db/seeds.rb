@@ -1,7 +1,7 @@
 User.destroy_all
-# Friendship.destroy_all
-# Friendship_Profiles.destroy_all
-
+Friendship.destroy_all
+# Friendship_Profile.destroy_all
+Project.destroy_all
 
 
 
@@ -16,8 +16,4 @@ User.destroy_all
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-sam = User.create([{ name: "Samuel"}])
-@jackson = User.create([{ name: "Jackson"}])
 
-@justin = User.create([{ name: "Justin"}])
-@jenny = User.create([{ name: "Jenny"}])
