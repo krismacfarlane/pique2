@@ -7,10 +7,14 @@ class FriendshipsController < ApplicationController
     @users = User.all
   end
 
+  def new
+    @friend = Friendship.new
+  end
+
   def create
-    @friend = Friendship.create
+    @friend = Friendship.create(friend_params)
     @friend.save!
-    redirect_to friends_path
+    redirect_to friends
   end
 
   def unfriend
@@ -23,6 +27,7 @@ class FriendshipsController < ApplicationController
     @friend = Friendship.find(params[:id])
     @user = User.find(params[:id])
     @friends = Friendship.all
+    # redirect_to friends_path
   end
 
   def edit
